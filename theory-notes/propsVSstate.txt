@@ -1,0 +1,25 @@
+Props
+
+- Props refers to the properties being passed into a component in order for it to work correctly, similar to how a fucntion receives parameters : "from above."
+
+- A component receiving props is not allowed to modify these props (i.e. they are immutable.)
+
+---------------------------------------------------------------------------------------------------------------------
+
+States
+
+- State refers to the values that are managed by the components, similar to variables declared inside a function.
+
+- Any time you have changing values that should be saved/displayed, you'll likely be using states.
+
+---------------------------------------------------------------------------------------------------------------------
+
+`View(DOM) as a function of state`
+
+1. Render : React runs your fucntion(component) and displays whatever JSX is returned. The function will only be run again if (1) it receives new props from above (2) its internal state changes values.
+
+2. setState : Changing a local, non-state variable doesn't cause React to re-render the component. Changing state with a built-in 'setState' function does.
+
+3. view = f(state) : Thus, when state changes and re-rendering happens, something new gets returned and replaces the old value on the DOM.
+
+---------------------------------------------------------------------------------------------------------------------
