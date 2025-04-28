@@ -1,4 +1,4 @@
-export default function IngredientsList({ items, toggleRecipeShown }) {
+export default function IngredientsList({ items, getRecipe }) {
 
     const itemList = items.map(item => {
         return <li>{item}</li>
@@ -6,7 +6,8 @@ export default function IngredientsList({ items, toggleRecipeShown }) {
 
     return (
         <section>
-            <h2>Ingredients on hand:</h2>
+            <h2>Ingredients in hand:</h2>
+            <i>(Add atleast 4 ingredients to continue)</i>
             <ul className="ingredients-list" aria-live="polite">
                 {itemList}
             </ul>
@@ -15,7 +16,7 @@ export default function IngredientsList({ items, toggleRecipeShown }) {
                     <h3>Ready for a recipe?</h3>
                     <p>Generate a recipe from your list of ingredients.</p>
                 </div>
-                <button onClick={toggleRecipeShown}>Get a recipe</button>
+                <button onClick={getRecipe}>Get a recipe</button>
             </div>}
         </section>
     )

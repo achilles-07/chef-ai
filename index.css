@@ -113,3 +113,14 @@ ul.ingredients-list > li {
   font-size: 0.875rem;
   cursor: pointer;
 }
+
+.suggested-recipe-container ul li, .suggested-recipe-container ol li {
+  margin-bottom: 8px;
+}
+
+.loader {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+}
