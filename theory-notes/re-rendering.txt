@@ -1,0 +1,20 @@
+A truth about re-rendering
+-----------------------------
+
+
+If you have multiple components inside current component, and current component re-renders,
+irrespective of whether sub-components depend on the `changing state or not, the sub-components 
+are still re-rendered!
+
+E.g.
+
+<App> 
+    [counter, setCounter] = useState(0);
+    
+    <Header />
+    <Counter count = {counter} />
+    <Footer>
+
+</App>
+
+> Here, all 3 subcomponents re-render even though only Counter depends on 'counter' state.

@@ -1,0 +1,15 @@
+# Conditional Rendering
+
+- often we use : {istrue && <h1>Value</h1>}
+
+But this has a problem in cases First value is not a boolean, but 0 instead.
+
+E.g. is we use { array.length && "Array is not empty" }  --> This displays 0 on the screen.
+
+
+
+---------------- SOLUTION -------------------------
+
+> Use ternary
+
+- {array.length === 0 ? "Array is not empty" : null}
